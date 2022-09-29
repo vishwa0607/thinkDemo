@@ -1,0 +1,10 @@
+.style{
+    position: relative;
+    top: 8vw;
+    justify-content: center;
+    display: flex;
+}
+.cardSize{
+height:13vw ;
+
+}
