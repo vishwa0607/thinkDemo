@@ -1,544 +1,624 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>thinkPen test</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <style>
-        .scrolling-wrapper{
-	overflow-x: auto;
-}
-
-@media screen and (max-width:700px) {
-    body{
-        background-color: #2BFF88;
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>thinkPen test</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <style>
+    .scrolling-wrapper {
+      overflow-x: auto;
     }
-    .res{
-        
-        height:30vw;
-        
-    } 
-  
-}
 
-.top{
+    @media screen and (max-width:1000px) {
+      body {
+        background-color: #489898;
+      }
+
+      .res {
+
+        height: 30vw;
+
+      }
+
+      .btn-p {
+        display: flex;
+        align-items: center
+      }
+
+      .nav-h {
+        margin-right: 0;
+      
+        background: rgba(0, 0, 0, 0.7) url(./asset/image/12.jpg);
+        background-blend-mode: darken;
+      background-size: cover;
+      }
+
+      .custombg {
+        margin-top: 0;
+      }
+
+      .top {
         position: relative;
-        top:15vh;
+        top: 50%;
+      }
+
+      .flexbox {
+        display: flex;
+        flex-direction: column;
+
+        background: #FFFB7D;
+      }
+
+      .cardSize {
+        height: 20vw;
+        width: 20vw;
+        background-size: cover;
+
+      }
+      .imgSize {
+        height: 22vw;
+        width: 22vw;
+       background-size: cover;
+
+
+      }
     }
-.card-block{
-	height:25vw;
-    width: 15vw;
-	background-color: #fff;
-	border: none;
-	background-position: center;
-	background-size: cover;
-	transition: all 0.2s ease-in-out !important;
-	border-radius: 24px;
-	    
-}
 
-.card-1{
-	background-color: #4158D0;
-background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-}
+    .nav-h {
+     
+      /* background-image: url(./asset/image/12.jpg); */
 
-.card-2{
-	background-color: #0093E9;
-background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-}
+    }
 
-.card-3{
-	background-color: #00DBDE;
-background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
-}
+    .top {
+      position: relative;
+      top: 31vh;
+    }
 
-.card-4{
-	background-color: #FBAB7E;
-background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-}
+    .card-block {
+      height: 25vw;
+      width: 15vw;
+      background-color: #fff;
+      border: none;
+      background-position: center;
+      background-size: cover;
+      transition: all 0.2s ease-in-out !important;
+      border-radius: 24px;
 
-.card-5{
-	background-color: #85FFBD;
-background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
-}
+    }
 
-.card-6{
-	background-color: #FA8BFF;
-background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
-}
+    .card-1 {
+      background-color: #4158D0;
+      background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    }
 
-.card-7{
-	background-color: #FA8BFF;
-background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
-}
+    .card-2 {
+      background-color: #0093E9;
+      background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    }
 
+    .card-3 {
+      background-color: #00DBDE;
+      background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    }
 
+    .card-4 {
+      background-color: #FBAB7E;
+      background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    }
 
+    .card-5 {
+      background-color: #85FFBD;
+      background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    }
 
-.custombg{
-    background-image: url(./asset/image/12.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-    margin-top: 0px;
-    height: 83vh;
-    width: 100vw;
-}
-.cardSize{
-height:13vw ;
+    .card-6 {
+      background-color: #FA8BFF;
+      background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+    }
+
+    .card-7 {
+      background-color: #FA8BFF;
+      background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+    }
 
 
-}
-.cardSize1{
-border-radius: 0px;
-border: none;
 
 
-}
-li{
-    margin-right: 25px;
-   
-}
-.leftul{
-     font-size:20px;
-    position: relative;
-    left: 15vw;
+    .custombg {
+      background-image: url(./asset/image/12.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-top: -100px;
+      height: 83vh;
+      width: 100vw;
+    }
 
-}
-ul{
-    align-items: center;
-}
-.space{
-    position: relative;
-    left: 20vw;
-}
-   
+    .cardSize {
+      height: 20vw;
 
-.flexbox{
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
+
+    }
+
     
-}
-.flexbox1{
-    
-    display: flex;
-    align-items: flex-start; 
-}
-body{
-    overflow-x: hidden;
-}
-    </style>
+    .cardSize2 {
+      height: 20vw;
+      width: 25vw;
+      
+      border-radius:0px;
+      border: none;
+
+
+    }
+
+    li {
+      margin-right: 25px;
+
+    }
+
+    .leftul {
+      font-size: 20px;
+      position: relative;
+      left: 15vw;
+
+    }
+
+    ul {
+      align-items: center;
+    }
+
+    .space {
+      position: relative;
+      left: 20vw;
+    }
+
+
+    .flexbox {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+    }
+
+    .flexbox1 {
+
+      display: flex;
+      align-items: flex-start;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container-fluid custombg">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-          
-          <button style="color: white;background-color: rgba(232, 219, 219, 0.677);" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <div class="container-fluid d-flex flex-row ">
-                    <div class="container d-flex flex-row justify-content-center align-items-center ">
-              <li class="nav-item ">
-                <a class="nav-link active" style="color:white ;" aria-current="page" href="#">usd</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link active" style="color:white ;" aria-current="page" href="#">icon</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link active" style="color:white ; font-size: 25px;" aria-current="page" href="#">trip<span style="color: red; font-size:30px">.</span>in</a>
-              </li>
-            </div>
-            <div class="container d-flex flex-row align-items-center leftul ">
-              <li class="nav-item ">
-                <a class="nav-link active " style="color:white ;" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" style="color:white ;" aria-current="page" href="#">TravelList </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active " style="color:white ;" aria-current="page" href="#">Page</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active " style="color:white ;" aria-current="page" href="#">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active " style="color:white ;" aria-current="page" href="#">Contact</a>
-              </li>
-            </div>
-            <div class="container d-flex flex-row align-items-center space  ">
-              <li class="nav-item">
-                <a class="nav-link active  " style="color:white ;" aria-current="page" href="#">704234432</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" style="color:white ;" aria-current="page" href="#">favourite</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link active "  aria-current="page" href="#"><img src="./asset/image/icons8-male-user-32.png" alt="" width="45px" height="45px" style="background-color: white;"></a>
-              </li>
-            </div>
-        </div> 
-            </ul>
-        
-    
-              
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg nav-h ">
+    <div class="container-fluid">
+
+      <button style="color: white;background-color: rgba(232, 219, 219, 0.677);" class="navbar-toggler btn-p"
+        type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+          <li class="nav-item ">
+            <a class="nav-link active" style="color:white ;" aria-current="page" href="#">usd</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link active" style="color:white ;" aria-current="page" href="#">icon</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link active" style="color:white ; font-size: 25px;" aria-current="page" href="#">trip<span
+                style="color: red; font-size:30px">.</span>in</a>
+          </li>
+
+
+          <li class="nav-item ">
+            <a class="nav-link active " style="color:white ;" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="color:white ;" aria-current="page" href="#">TravelList </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active " style="color:white ;" aria-current="page" href="#">Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active " style="color:white ;" aria-current="page" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active " style="color:white ;" aria-current="page" href="#">Contact</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link active  " style="color:white ;" aria-current="page" href="#">704234432</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="color:white ;" aria-current="page" href="#">favourite</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active " aria-current="page" href="#"><img src="./asset/image/icons8-male-user-32.png"
+                alt="" width="45px" height="45px" style="background-color: white;"></a>
+          </li>
+
+
+        </ul>
+
+
+
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid custombg">
+    <!--Navbar -->
+    <div class="container top">
+      <h2 class="text-light" style="position: relative; left: 7vw;">United States Of America</h2>
+      <h1 class="text-light" style="font-size:7vw ;">Arizona</h1>
+      <p class="text-light">The 48th state , which became part of the United State. <br>Located in the South-West of the
+        country</p>
+      <button class="btn btn-lg" style="background-color:rgb(245, 139, 18);">Book now</button>
+      <button class="btn btn-lg text-light">Choose Tour </button>
+
+
+    </div>
+  </div>
+  <!--Most Popular Tours-->
+  <div class="container-fluid my-5 ">
+    <div class="container">
+      <h1>Most Popular Tours</h1>
+      <div class="flexbox">
+        <div class="">
+          <p>Latin literature from 45 BC, making it over 2000 years old</p>
+        </div>
+        <div style="position: relative;right:9vw;">
+          <p>View all destinations <i class="fa-solid fa-arrow-left"></i> <i class="fa-solid fa-arrow-right"></i></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5 d-flex flex-row flex-nowrap justify-content-center ">
+      <div class="container mx-4 mb-5" style="max-height:20vw; width: 39vw; border-radius: 10px;object-fit: cover; ">
+        <div class="card text-light border-0">
+          <img class="card-img" src="./asset/image/na1.jpg" alt="Card image">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Card title</h5>
+            <light class="card-text">.</p>
+              <light class="card-text">
+                </p>
           </div>
         </div>
-        </nav>
-       <!--Navbar -->
-       <div class="container my-5 top">
-        <h2  class="text-light" style="position: relative; left: 7vw;">United States Of America</h2>
-         <h1  class="text-light" style="font-size:7vw ;">Arizona</h1>
-         <p class="text-light">The 48th state , which became part of the United State. <br>Located in the South-West of the country</p>
-         <button class="btn btn-lg" style="background-color:rgb(245, 139, 18);">Book now</button>
-         <button class="btn btn-lg text-light">Choose Tour </button>
-         
-    
-            </div>
-    </div>
-    <!--Most Popular Tours-->
-        <div class="container-fluid my-5">
-            <div class="container">
-                <h1>Most Popular Tours</h1>
-                <div class="flexbox">
-                <div class="">
-                <p>Latin literature from 45 BC, making  it over 2000 years old</p> 
-                </div>
-                <div style="position: relative;right:9vw;">
-                <p>View all destinations <i class="fa-solid fa-arrow-left"></i>    <i class="fa-solid fa-arrow-right"></i></p> 
-                </div>
-                </div>
-            </div>
-        
-        <div class="container my-5 d-flex flex-row flex-wrap justify-content-center ">
-            <div class="container mx-4 mb-5" style="max-height:20vw; width: 39vw; border-radius: 10px;object-fit: cover; ">
-                <div class="card text-light border-0">
-                    <img class="card-img" src="./asset/image/na1.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                      <h5 class="card-title">Card title</h5>
-                      <light class="card-text">.</p>
-                      <light class="card-text"></p>
-                    </div>
-                  </div>
-                  
-            </div>
-            <div class="container mx-4" style="max-height:20vw;border-radius: 10px; width: 39vw;">
-                <div class="card text-light border-0">
-                    <img class="card-img" src="./asset/image/usa.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">.</p>
-                      <p class="card-text"></p>
-                    </div>
-                  </div>
-                  
-            </div>
-            
+
+      </div>
+      <div class="container mx-4" style="max-height:20vw;border-radius: 10px; width: 39vw;">
+        <div class="card text-light border-0">
+          <img class="card-img" src="./asset/image/usa.jpg" alt="Card image">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">.</p>
+            <p class="card-text"></p>
+          </div>
         </div>
-       
-       
-   <!--top destinations-->
-        <div class="container my-5">
-            <h1>Top destinations</h1>
-            <div class="flexbox">
-            <div >
-            <p>This is the most popular destination in the last month</p> 
-            </div>
-            <div class="">
-            <p>View all destinations</p> 
-            </div>
-        </div>
-         <!--Card row-->
-        <div class="container-fluid my-5">
-            <div class="row">
-                
-            <div class="col-md-3 mb-3" >
-                <div class="card text-light res">
-                    <img class="card-img cardSize" src="./asset/image/usa.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                      <h5 class="card-title style">America</h5>
-                    </div>
-                  </div>
-                  
-            </div>
-            <div class="col-md-3 mb-3" >
-                <div class="card text-light">
-                    <img class="card-img cardSize" src="./asset/image/bui.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                      <h5 class="card-title style">Australia</h5>
-                      
-                      
-                    </div>
-                  </div>
-                  
-            </div>
-            <div class="col-md-3  mb-3" >
-                <div class="card text-light">
-                    <img class="card-img cardSize" src="./asset/image/portugal.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                      <h5 class="card-title style">Portugal</h5>
-                   
-                      
-                    </div>
-                  </div>
-                  
-            </div>
-            <div class="col-md-3  mb-3" >
-                <div class="card text-light">
-                    <img class="card-img cardSize" src="./asset/image/russia.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                      <h5 class="card-title style">Russia</h5>
-                      
-                    </div>
-                  </div>
-                  
-            </div>
-            </div>
-            <div class="row my-5">
-                
-                <div class="col-md-3  mb-3" >
-                    <div class="card text-light">
-                        <img class="card-img cardSize" src="./asset/image/abv.jpg" alt="Card image">
-                        <div class="card-img-overlay">
-                          <h5 class="card-title style">Africa</h5>
-                          
-                         
-                        </div>
-                      </div>
-                      
-                </div>
-                <div class="col-md-3  mb-3" >
-                    <div class="card text-light">
-                        <img class="card-img cardSize" src="./asset/image/italy.jpg" alt="Card image">
-                        <div class="card-img-overlay">
-                          <h5 class="card-title style">Italy</h5>
-                         
-                          
-                        </div>
-                      </div>
-                      
-                </div>
-                <div class="col-md-3  mb-3" >
-                    <div class="card text-light">
-                        <img class="card-img cardSize" src="./asset/image/maldive.jpg" alt="Card image">
-                        <div class="card-img-overlay">
-                          <h5 class="card-title style">Maldives</h5>
-                        
-                        </div>
-                      </div>
-                      
-                </div>
-                <div class="col-md-3  mb-3 " >
-                    <div class="card text-light">
-                        <img class="card-img cardSize" src="./asset/image/japan.jpg" alt="Card image">
-                        <div class="card-img-overlay">
-                          <h5 class="card-title style">Japan</h5>
-                          
-                        </div>
-                      </div>
-                      
-                </div>
-              </div>
-        </div>
-       
-        </div>
-<!--blue div-->
-    <div class="container mb-4" style="background-color: blue; color:white; height: 10vw;width: 100vw; border-radius: 10px;">
+
+      </div>
 
     </div>
-<!--Interesting stories-->
-    <div class="container my-5">
-        <h1>Interesting Stories</h1>
-        <div class="flexbox">
-            <div >
-                <p>This is the most popular destination in the last month</p> 
-            </div>
-            <div class="">
-                <p>All Stories</p> 
-            </div>
+
+
+    <!--top destinations-->
+    <div class="container my-5 ">
+      <h1>Top destinations</h1>
+      <div class="flexbox">
+        <div>
+          <p>This is the most popular destination in the last month</p>
         </div>
+        <div class="">
+          <p>View all destinations</p>
+        </div>
+      </div>
+      <!--Card row-->
+      <div class="container d-flex flex-column my-5 align-items-center justify-content-center">
+        <div class="row">
+
+          <div class="col-md-3 mb-3 ">
+            <div class="card text-light cardSize mx-auto">
+              <img class="card-img cardSize " src="./asset/image/usa.jpg" alt="Card image">
+              <div class="card-img-overlay">
+                <h5 class="card-title style">America</h5>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card text-light cardSize  mx-auto">
+              <img class="card-img cardSize" src="./asset/image/bui.jpg" alt="Card image">
+              <div class="card-img-overlay">
+                <h5 class="card-title style">Australia</h5>
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3  mb-3">
+            <div class="card text-light cardSize  mx-auto">
+              <img class="card-img cardSize" src="./asset/image/portugal.jpg" alt="Card image">
+              <div class="card-img-overlay">
+                <h5 class="card-title style">Portugal</h5>
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3  mb-3">
+            <div class="card text-light cardSize  mx-auto">
+              <img class="card-img cardSize" src="./asset/image/russia.jpg" alt="Card image">
+              <div class="card-img-overlay">
+                <h5 class="card-title style">Russia</h5>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="row my-5">
+
+          <div class="col-md-3  mb-3">
+            <div class="card text-light cardSize  mx-auto">
+              <img class="card-img cardSize" src="./asset/image/abv.jpg" alt="Card image">
+              <div class="card-img-overlay">
+                <h5 class="card-title style">Africa</h5>
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3  mb-3">
+            <div class="card text-light cardSize  mx-auto">
+              <img class="card-img cardSize" src="./asset/image/italy.jpg" alt="Card image">
+              <div class="card-img-overlay">
+                <h5 class="card-title style">Italy</h5>
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3  mb-3">
+            <div class="card text-light cardSize  mx-auto">
+              <img class="card-img cardSize" src="./asset/image/maldive.jpg" alt="Card image">
+              <div class="card-img-overlay">
+                <h5 class="card-title style">Maldives</h5>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3  mb-3 ">
+            <div class="card text-light cardSize  mx-auto">
+              <img class="card-img cardSize" src="./asset/image/japan.jpg" alt="Card image">
+              <div class="card-img-overlay">
+                <h5 class="card-title style">Japan</h5>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--blue div-->
+    <div class="container mb-4"
+      style="background-color: blue; color:white; height: 10vw;width: 80vw; border-radius: 10px;">
+
+    </div>
+    <!--Interesting stories-->
+    <div class="container my-5">
+      <h1>Interesting Stories</h1>
+      <div class="flexbox">
+        <div>
+          <p>This is the most popular destination in the last month</p>
+        </div>
+        <div class="">
+          <p>All Stories</p>
+        </div>
+      </div>
     </div>
     <!--cardsSTories-->
-    <div class="container-fluid">
-        <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2 overflow-auto">
-                <div class="col-2">
-                    <div class="card card-block card-1"></div>
-                </div>
-                <div class="col-2">
-                    <div class="card card-block card-2"></div>
-                </div>
-                <div class="col-2">
-                    <div class="card card-block card-3"></div>
-                </div>
-                <div class="col-2">
-                    <div class="card card-block card-4"></div>
-                </div>
-                <div class="col-2">
-                    <div class="card card-block card-5"></div>
-                </div>
-                <div class="col-2">
-                    <div class="card card-block card-6"></div>
-                </div>
-                <div class="col-2">
-                    <div class="card card-block card-7"></div>
-                </div>
-                
+    <!-- <div class="container-fluid">
+      <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2 overflow-auto">
+        <div class="col-2">
+          <div class="card card-block card-1"></div>
         </div>
-    </div>
+        <div class="col-2">
+          <div class="card card-block card-2"></div>
+        </div>
+        <div class="col-2">
+          <div class="card card-block card-3"></div>
+        </div>
+        <div class="col-2">
+          <div class="card card-block card-4"></div>
+        </div>
+        <div class="col-2">
+          <div class="card card-block card-5"></div>
+        </div>
+        <div class="col-2">
+          <div class="card card-block card-6"></div>
+        </div>
+        <div class="col-2">
+          <div class="card card-block card-7"></div>
+        </div>
+
+      </div>
+    </div> -->
     <!--Recent Blog Post-->
     <div class="container my-5">
-        <h1>Recent Blog Post</h1>
-        <div class="flexbox">
-            <div >
-                <p>Watch and be inspired</p> 
-            </div>
-            <div class="">
-                <p>All blog post</p> 
-            </div>
+      <h1>Recent Blog Post</h1>
+      <div class="flexbox">
+        <div>
+          <p>Watch and be inspired</p>
         </div>
+        <div class="">
+          <p>All blog post</p>
+        </div>
+      </div>
     </div>
-     <!--Recent Blog Post cards-->
-     <div class="container">
-        <div class="d-flex flex-row justify-content-evenly mb-5">
-                
-        <div class="col-md-3" >
-            <div class="card text-light">
-                <img class="card-img cardSize" src="./asset/image/usa.jpg" alt="Card image">
-                <div class="card-img-overlay">
-                    <button  class="btn text-light" style="background-color:rgb(217, 70, 44)">Stream</button> <button class="btn" style="background-color:rgb(8, 228, 93)"> Countries</button>
-                  
-                </div>
-              </div>
-              <p class="my-2" id="demo"></p>
-            <script>const a= new Date();
-            document.getElementById("demo").innerHTML = a;
-            </script>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum dolorem sit est aperiam facilis sapiente debitisstias. A, reprehenderit repudiandae!</p>
-              
-        </div>
-        <div class="col-md-3" >
-            <div class="card  text-light">
-                <img class="card-img cardSize" src="./asset/image/bui.jpg" alt="Card image">
-                <div class="card-img-overlay">
-                    <button  class="btn text-light" style="background-color:rgb(52, 49, 209)">Video</button>
-                  
-                  
-                  
-                </div>
+    <!--Recent Blog Post cards-->
+    <div class="container">
+      <div class="d-flex flex-row justify-content-evenly mb-5">
+
+        <div class="col-md-3">
+          <div class="card text-light">
+            <img class="card-img cardSize" src="./asset/image/usa.jpg" alt="Card image">
+            <div class="card-img-overlay">
+              <button class="btn text-light" style="background-color:rgb(217, 70, 44)">Stream</button> <button
+                class="btn" style="background-color:rgb(8, 228, 93)"> Countries</button>
+
             </div>
-            <p class="my-2" id="demo1"></p>
-            <script>const d= new Date();
+          </div>
+          <p class="my-2" id="demo"></p>
+          <script>const a = new Date();
+            document.getElementById("demo").innerHTML = a;
+          </script>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum dolorem sit est aperiam facilis
+            sapiente debitisstias. A, reprehenderit repudiandae!</p>
+
+        </div>
+        <div class="col-md-3">
+          <div class="card  text-light">
+            <img class="card-img cardSize" src="./asset/image/bui.jpg" alt="Card image">
+            <div class="card-img-overlay">
+              <button class="btn text-light" style="background-color:rgb(52, 49, 209)">Video</button>
+
+
+
+            </div>
+          </div>
+          <p class="my-2" id="demo1"></p>
+          <script>const d = new Date();
             document.getElementById("demo1").innerHTML = d;
-            </script>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum dolorem sit est aperiam facilis sapiente debitisstias. A, reprehenderit repudiandae!</p>
-              
+          </script>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum dolorem sit est aperiam facilis
+            sapiente debitisstias. A, reprehenderit repudiandae!</p>
+
         </div>
-        <div class="col-md-3" >
-            <div class="card text-light">
-                <img class="card-img cardSize" src="./asset/image/portugal.jpg" alt="Card image">
-                <div class="card-img-overlay">
-                    <button  class="btn text-light" style="background-color:rgb(52, 52, 65)">Tips</button>
-                 
-               
-                  
-                </div>
-              </div>
-              <p class="my-2" id="demo2"></p>
-            <script>const e= new Date();
+        <div class="col-md-3">
+          <div class="card text-light">
+            <img class="card-img cardSize" src="./asset/image/portugal.jpg" alt="Card image">
+            <div class="card-img-overlay">
+              <button class="btn text-light" style="background-color:rgb(52, 52, 65)">Tips</button>
+
+
+
+            </div>
+          </div>
+          <p class="my-2" id="demo2"></p>
+          <script>const e = new Date();
             document.getElementById("demo2").innerHTML = e;
-            </script>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum dolorem sit est aperiam facilis sapiente debitisstias. A, reprehenderit repudiandae!</p>
-              
+          </script>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum dolorem sit est aperiam facilis
+            sapiente debitisstias. A, reprehenderit repudiandae!</p>
+
         </div>
-      
-        </div>
+
+      </div>
     </div>
     <!--Newsletters div-->
-    <div class="container mb-4 d-flex flex-row justify-content-center align-items-center" style="background-image:url(./asset/image/1.jpg); background-size:contain;  color:white; height: 10vw;width: 100vw; border-radius: 10px;">
-        <div class="class"><h1>Newsletters</h1></div>
-    
-    <div class="col-4 offset-1">
-    <form>
-      <div class="d-flex w-100 gap-2">
-        <label for="newsletter1" class="visually-hidden">Email </label>
-        <input id="newsletter1" type="text"class="form-control" placeholder="Email address">
-        <button class="btn btn-primary" type="button">Email</button>
+    <div class="container mb-4 d-flex flex-row justify-content-center align-items-center"
+      style="background-image:url(./asset/image/1.jpg); background-size:contain;  color:white; height: 10vw;width: 100vw; border-radius: 10px;">
+      <div class="class">
+        <h1>Newsletters</h1>
       </div>
-    </form>
-  </div>
-</div>
+
+      <div class="col-4 offset-1">
+        <form>
+          <div class="d-flex w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email </label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Email</button>
+          </div>
+        </form>
+      </div>
     </div>
-        <!--cardPicture-->
-        <div class="container-fluid">
-            <div class="d-flex flex-row mx-0">
-                <div class="col-md-3" >
-                    <div class="card text-light cardSize1">
-                        <img class="card-img cardSize" style="background-size: cover;" src="./asset/image/usa.jpg" alt="Card image">
-                        <div class="card-img-overlay">
-                          
-                        </div>
-                      </div>
-                      
-                </div>
-                <div class="col-md-2" >
-                    <div class="card text-light cardSize1">
-                        <img class="card-img cardSize" src="./asset/image/bui.jpg" alt="Card image">
-                        <div class="card-img-overlay">
-                          
-                          
-                          
-                        </div>
-                      </div>
-                      
-                </div>
-                <div class="col-md-2" >
-                    <div class="card text-light cardSize1">
-                        <img class="card-img  cardSize" src="./asset/image/portugal.jpg" alt="Card image">
-                        <div class="card-img-overlay">
-                          
-                       
-                          
-                        </div>
-                      </div>
-                      
-                </div>
-                <div class="col-md-2" >
-                    <div class="card text-light cardSize1">
-                        <img class="card-img  cardSize" src="./asset/image/russia.jpg" alt="Card image">
-                        <div class="card-img-overlay">
-                         
-                          
-                        </div>
-                      </div>
-                      
-                </div>  
-                <div class="col-md-2" >
-                    <div class="card text-light cardSize1">
-                        <img class="card-img  cardSize " src="./asset/image/russia.jpg" alt="Card image">
-                        <div class="card-img-overlay">
-                          
-                          
-                        </div>
-                      </div>
-                      
-                </div>  
-            </div>
+  </div>
+  <!--cardPicture-->
+  <div class="container-fluid">
+    <div class="container-fluid d-flex flex-row mx-0 ">
+      <div class="col-md-3">
+        <div class="card text-light cardSize1">
+          <img class="card-img cardSize2" style="background-size: cover;" src="./asset/image/usa.jpg" alt="Card image">
+          <div class="card-img-overlay">
+
+          </div>
         </div>
+
+      </div>
+      <div class="col-md-2">
+        <div class="card text-light cardSize1">
+          <img class="card-img cardSize2" src="./asset/image/bui.jpg" alt="Card image">
+          <div class="card-img-overlay">
+
+
+
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-2">
+        <div class="card text-light cardSize1">
+          <img class="card-img  cardSize2" src="./asset/image/portugal.jpg" alt="Card image">
+          <div class="card-img-overlay">
+
+
+
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-2">
+        <div class="card text-light cardSize1">
+          <img class="card-img  cardSize2" src="./asset/image/russia.jpg" alt="Card image">
+          <div class="card-img-overlay">
+
+
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-2">
+        <div class="card text-light cardSize1">
+          <img class="card-img  cardSize2 " src="./asset/image/russia.jpg" alt="Card image">
+          <div class="card-img-overlay">
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
   <!--Footer-->
-  <div class="container-fluid bg-dark text-light">
+  <div class="container-fluid bg-dark text-light mx-0">
     <footer class="py-5">
       <div class="row">
         <div class="col-2 mx-5">
-            
-          
+
+
           <ul class="nav ">
             <h5>Travel list</h5>
             <li class=" mb-2"><a href="#" class="nav-link p-0 text-light">Travel list Fullwidth </a></li>
@@ -550,10 +630,10 @@ body{
             <li class=" mb-2"><a href="#" class="nav-link p-0 text-light">Search Result</a></li>
           </ul>
         </div>
-       
-  
+
+
         <div class="col-2">
-           
+
           <ul class="nav flex-column flexbox1">
             <h5>Page</h5>
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
@@ -563,9 +643,9 @@ body{
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">About</a></li>
           </ul>
         </div>
-  
+
         <div class="col-2">
-         
+
           <ul class="nav flex-column flexbox1">
             <h5>Blog</h5>
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
@@ -575,31 +655,40 @@ body{
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">About</a></li>
           </ul>
         </div>
-  
+
         <div class="col-4 offset-1">
           <form>
             <h5>Subscribe to our newsletter</h5>
             <p>Monthly digest of whats new and exciting from us.</p>
             <div class="d-flex w-100 gap-2">
               <label for="newsletter1" class="visually-hidden">Email address</label>
-              <input id="newsletter1" type="text"class="form-control" placeholder="Email address">
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
               <button class="btn btn-primary" type="button">Subscribe</button>
             </div>
           </form>
         </div>
       </div>
-  
+
       <div class="d-flex justify-content-between py-4 my-4 border-top">
         <p>© 2021 Company, Inc. All rights reserved.</p>
         <ul class="list-unstyled d-flex">
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#twitter"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#instagram"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#facebook"></use>
+              </svg></a></li>
         </ul>
       </div>
     </footer>
   </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/d04f536cfe.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/d04f536cfe.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
